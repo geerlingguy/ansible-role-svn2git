@@ -1,6 +1,6 @@
-# Ansible Role: Svn2Git
+# Ansible Role: KDE's Svn2Git
 
-Installs Svn2Git, a tool for quickly and easily converting SVN repositories to Git repositories, on any RHEL/CentOS Linux system.
+Installs KDE's Svn2Git, a tool for quickly and easily converting SVN repositories to Git repositories, on any RHEL/CentOS Linux system.
 
 ## Requirements
 
