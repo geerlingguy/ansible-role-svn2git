@@ -9,15 +9,15 @@
 - name: Clone Svn2Git from Gitorious.
   git: >
     repo=https://git.gitorious.org/svn2git/svn2git.git
-    dest={{ workspace }}
+    dest={{ svn2git_install_path }}/svn2git
 
 - name: Build Svn2Git.
   shell: >
-    qmake && make
-    chdir={{ workspace }}/svn2git
+    {{ svn2git_qmake_bin_path }} && make
+    chdir={{ svn2git_install_path }}/svn2git
 
 - name: Add symlink to svn-all-fast-export.
   file: >
-    src={{ workspace }}/svn2git/svn-all-fast-export
+    src={{ svn2git_install_path }}/svn2git/svn-all-fast-export
     dest=/usr/bin/svn-all-fast-export
     state=link
