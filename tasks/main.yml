@@ -17,6 +17,7 @@
   shell: >
     {{ svn2git_qmake_bin_path }} && make
     chdir={{ svn2git_install_path }}/svn2git
+    creates={{ svn2git_install_path }}/svn2git/svn-all-fast-export
 
 - name: Add symlink to svn-all-fast-export.
   file:
