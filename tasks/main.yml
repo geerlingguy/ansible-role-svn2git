@@ -5,6 +5,7 @@
     - qt
     - qt-devel
     - subversion-devel
+    - gcc-c++
   when: ansible_os_family == 'RedHat'
 
 - name: Clone Svn2Git from Gitorious.
