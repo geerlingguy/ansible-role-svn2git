@@ -2,4 +2,6 @@
 - hosts: all
 
   roles:
+    - geerlingguy.svn
+    - geerlingguy.git
     - role_under_test
