@@ -1,6 +1,8 @@
 # Ansible Role: KDE's Svn2Git
 
-Installs KDE's Svn2Git, a tool for quickly and easily converting SVN repositories to Git repositories, on any RHEL/CentOS Linux system.
+[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-svn2git.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-svn2git)
+
+Installs [KDE's Svn2Git](https://techbase.kde.org/Projects/MoveToGit/UsingSvn2Git), a tool for quickly and easily converting SVN repositories to Git repositories, on any RHEL/CentOS Linux system.
 
 ## Requirements
 
@@ -8,7 +10,7 @@ None.
 
 ## Role Variables
 
-Available variables are listed below, along with default values (see `vars/main.yml`):
+Available variables are listed below, along with default values (see `defaults/main.yml`):
 
     workspace: /root
 
@@ -24,14 +26,16 @@ The path to the `qmake` binary executable. This could differ slightly based on w
 
 ## Dependencies
 
-  - geerlingguy.svn
-  - geerlingguy.git
+  - `geerlingguy.svn`
+  - `geerlingguy.git`
 
 ## Example Playbook
 
     - hosts: servers
       roles:
-        - { role: geerlingguy.git }
+        - geerlingguy.svn
+        - geerlingguy.git
+        - geerlingguy.svn2git
 
 ## License
 
@@ -39,4 +43,4 @@ MIT / BSD
 
 ## Author Information
 
-This role was created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://ansiblefordevops.com/).
+This role was created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://www.ansiblefordevops.com/).

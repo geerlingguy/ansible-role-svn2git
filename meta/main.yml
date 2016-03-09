@@ -1,18 +1,18 @@
 ---
 dependencies:
-  - { role: geerlingguy.svn }
-  - { role: geerlingguy.git }
+  - geerlingguy.svn
+  - geerlingguy.git
 
 galaxy_info:
   author: geerlingguy
-  description: Svn2Git VCS conversion software
+  description: Svn2Git VCS conversion software for Linux.
   company: "Midwestern Mac, LLC"
   license: "license (BSD, MIT)"
-  min_ansible_version: 1.4
+  min_ansible_version: 1.8
   platforms:
-  - name: EL
-    versions:
-    - all
-  categories:
+    - name: EL
+      versions:
+      - all
+  galaxy_tags:
     - development
     - system

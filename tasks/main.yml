@@ -1,15 +1,16 @@
 ---
 - name: Ensure dependencies are installed.
-  yum: name={{ item }} state=installed
+  yum: "name={{ item }} state=installed"
   with_items:
     - qt
     - qt-devel
     - subversion-devel
+  when: ansible_os_family == 'RedHat'
 
 - name: Clone Svn2Git from Gitorious.
-  git: >
-    repo=https://git.gitorious.org/svn2git/svn2git.git
-    dest={{ svn2git_install_path }}/svn2git
+  git:
+    repo: https://git.gitorious.org/svn2git/svn2git.git
+    dest: "{{ svn2git_install_path }}/svn2git"
 
 - name: Build Svn2Git.
   shell: >
@@ -17,7 +18,7 @@
     chdir={{ svn2git_install_path }}/svn2git
 
 - name: Add symlink to svn-all-fast-export.
-  file: >
-    src={{ svn2git_install_path }}/svn2git/svn-all-fast-export
-    dest=/usr/bin/svn-all-fast-export
-    state=link
+  file:
+    src: "{{ svn2git_install_path }}/svn2git/svn-all-fast-export"
+    dest: /usr/bin/svn-all-fast-export
+    state: link

@@ -1,4 +1,5 @@
 ---
 workspace: /root
+
 svn2git_install_path: /usr/local/share
 svn2git_qmake_bin_path: /usr/lib64/qt4/bin/qmake
