@@ -18,6 +18,7 @@
     - qtbase5-dev
     - libsvn-dev
     - gcc
+    - make
   when: ansible_os_family == 'Debian'
 
 - name: Clone Svn2Git from Gitorious.
