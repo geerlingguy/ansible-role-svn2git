@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/geerlingguy/ansible-role-svn2git.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-svn2git)
 
-Installs [KDE's Svn2Git](https://techbase.kde.org/Projects/MoveToGit/UsingSvn2Git), a tool for quickly and easily converting SVN repositories to Git repositories, on any RHEL/CentOS Linux system.
+Installs [KDE's Svn2Git](https://techbase.kde.org/Projects/MoveToGit/UsingSvn2Git), a tool for quickly and easily converting SVN repositories to Git repositories, on any RHEL/CentOS or Debian/Ubuntu Linux system.
 
 ## Requirements
 
@@ -43,4 +43,4 @@ MIT / BSD
 
 ## Author Information
 
-This role was created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://www.ansiblefordevops.com/).
+This role was created in 2014 by [Jeff Geerling](http://www.jeffgeerling.com/), author of [Ansible for DevOps](http://www.ansiblefordevops.com/).

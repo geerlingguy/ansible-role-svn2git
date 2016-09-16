@@ -1,5 +1,5 @@
 ---
-- name: Ensure dependencies are installed.
+- name: Ensure dependencies are installed (RedHat).
   yum: "name={{ item }} state=installed"
   with_items:
     - qt
@@ -7,6 +7,14 @@
     - subversion-devel
     - gcc-c++
   when: ansible_os_family == 'RedHat'
+
+- name: Ensure dependencies are installed (Debian).
+  apt: "name={{ item }} state=installed"
+  with_items:
+    - qt4-dev-tools
+    - subversion-tools
+    - gcc
+  when: ansible_os_family == 'Debian'
 
 - name: Clone Svn2Git from Gitorious.
   git:
