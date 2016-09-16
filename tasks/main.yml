@@ -11,8 +11,10 @@
 - name: Ensure dependencies are installed (Debian).
   apt: "name={{ item }} state=installed"
   with_items:
-    - qt4-dev-tools
-    - subversion-tools
+    - libqt4-core
+    - libqt4-dev
+    - libqt4-gui
+    - libsvn-dev
     - gcc
   when: ansible_os_family == 'Debian'
 
