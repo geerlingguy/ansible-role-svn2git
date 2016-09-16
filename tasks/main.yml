@@ -17,8 +17,7 @@
     - qt5-default
     - qtbase5-dev
     - libsvn-dev
-    - gcc
-    - make
+    - build-essential
   when: ansible_os_family == 'Debian'
 
 - name: Clone Svn2Git from Gitorious.
