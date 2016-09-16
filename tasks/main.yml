@@ -13,7 +13,8 @@
   with_items:
     - libqt4-core
     - libqt4-dev
-    - libqt4-gui
+    - qt4-default
+    - qt4-qmake
     - libsvn-dev
     - gcc
   when: ansible_os_family == 'Debian'
