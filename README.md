@@ -22,7 +22,7 @@ The location where svn2git will be installed.
 
     svn2git_qmake_bin_path: /usr/lib64/qt4/bin/qmake
 
-The path to the `qmake` binary executable. This could differ slightly based on where QT4 is installed on your system.
+The path to the `qmake` binary executable. This could differ slightly based on where QT is installed on your system.
 
 ## Dependencies
 

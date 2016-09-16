@@ -1,4 +1,7 @@
 ---
+- name: Include OS-specific variables.
+  include_vars: "{{ ansible_os_family }}.yml"
+
 - name: Ensure dependencies are installed (RedHat).
   yum: "name={{ item }} state=installed"
   with_items:
