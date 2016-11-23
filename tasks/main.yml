@@ -22,7 +22,7 @@
 
 - name: Clone Svn2Git from Gitorious.
   git:
-    repo: https://gitorious.org/svn2git/svn2git.git
+    repo: "{{ svn2git_source_repo }}"
     dest: "{{ svn2git_install_path }}/svn2git"
 
 - name: Build Svn2Git.
