@@ -1,2 +1,2 @@
-.DS_Store
-.LSOverride
+*.retry
+tests/test.sh
