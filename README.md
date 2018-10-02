@@ -16,6 +16,11 @@ Available variables are listed below, along with default values (see `defaults/m
 
 Where certain files will be downloaded and built for git2svn installation.
 
+    svn2git_source_repo: https://github.com/svn-all-fast-export/svn2git.git
+    svn2git_source_version: master
+
+The source repository and version (git branch, tag, or commit hash) from which svn2git's code will be cloned.
+
     svn2git_install_path: /usr/local/share
 
 The location where svn2git will be installed.
