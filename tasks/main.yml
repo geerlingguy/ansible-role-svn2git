@@ -1,26 +1,14 @@
 ---
 - name: Include OS-specific variables.
   include_vars: "{{ ansible_os_family }}.yml"
+  with_first_found:
+    - "{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml"
+    - "{{ ansible_os_family }}.yml"
 
 - name: Ensure dependencies are installed (RedHat).
-  yum:
-    name:
-      - qt
-      - qt-devel
-      - subversion-devel
-      - gcc-c++
+  package:
+    name: "{{ svn2git_dependencies }}"
     state: present
-  when: ansible_os_family == 'RedHat'
-
-- name: Ensure dependencies are installed (Debian).
-  apt:
-    name:
-      - qt5-default
-      - qtbase5-dev
-      - libsvn-dev
-      - build-essential
-    state: present
-  when: ansible_os_family == 'Debian'
 
 - name: Clone Svn2Git from Gitorious.
   git:

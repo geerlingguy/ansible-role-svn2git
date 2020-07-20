@@ -1,2 +1,7 @@
 ---
 svn2git_qmake_bin_path: qmake
+svn2git_dependencies:
+  - qt5-default
+  - qtbase5-dev
+  - libsvn-dev
+  - build-essential
