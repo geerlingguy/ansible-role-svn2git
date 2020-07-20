@@ -1,5 +1,5 @@
 ---
-svn2git_qmake_bin_path: /usr/lib64/qt4/bin/qmake
+svn2git_qmake_bin_path: /usr/lib64/qt5/bin/qmake
 svn2git_dependencies:
   - qt5-qtbase
   - qt5-qtbase-devel
