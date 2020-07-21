@@ -5,3 +5,4 @@ svn2git_dependencies:
   - qt5-qtbase-devel
   - subversion-devel
   - gcc-c++
+  - make
